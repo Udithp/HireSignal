@@ -1,0 +1,74 @@
+Job_Title,Skills
+Full Stack Developer,javascript typescript react angular vue nodejs express mongodb postgresql html css tailwind fullstack frontend backend rest api next nextjs
+Frontend Developer,javascript typescript react angular vue html css tailwind responsive ui ux figma design web accessibility
+Backend Engineer,python nodejs java spring fastapi rest api microservices sql postgresql mongodb redis docker api server
+Software Engineer,python java c++ algorithms data structures oop software design git agile system design code review
+Mobile App Developer,flutter react native android ios swift kotlin mobile app cross platform firebase
+Android Developer,android kotlin java android studio sdk firebase mobile material design
+iOS Developer,swift ios xcode objective-c cocoa apple mobile app store
+DevOps Engineer,docker kubernetes ci cd jenkins ansible terraform aws gcp azure cloud linux bash shell pipeline
+Cloud Architect,aws azure gcp cloud infrastructure terraform serverless microservices s3 lambda vpc
+Site Reliability Engineer,sre reliability slo sla kubernetes monitoring prometheus grafana incident postmortem
+Data Scientist,python machine learning statistics pandas numpy scikit-learn tensorflow keras data analysis visualization prediction
+Machine Learning Engineer,python pytorch tensorflow sklearn mlops model deployment deep learning nlp training evaluation huggingface
+Deep Learning Specialist,pytorch tensorflow cnn rnn lstm transformer neural network gpu cuda training fine tuning
+NLP Engineer,nlp huggingface transformers bert gpt spacy nltk text classification sentiment named entity
+Computer Vision Engineer,opencv pytorch tensorflow cnn image classification object detection yolo segmentation
+Data Engineer,spark kafka airflow etl pipeline sql python data warehouse bigquery dbt ingestion
+MLOps Engineer,mlflow kubeflow docker kubernetes ci cd model serving monitoring mlops experiment tracking
+AI Research Scientist,llm gpt bert research arxiv machine learning deep learning pytorch papers language model fine tuning
+Data Architect,data modeling architecture warehouse lake sql erp metadata governance
+Big Data Developer,hadoop spark hive hdfs kafka flink bigdata scala java
+Robotics Engineer,ros python c++ robot kinematics sensors actuators simulation gazebo
+Automation Engineer,python selenium rpa automation testing robot framework ci cd
+Embedded Systems Engineer,c c++ rtos microcontroller arduino arm embedded firmware iot
+Firmware Engineer,c firmware bare metal embedded bootloader driver uart spi i2c
+Blockchain Developer,solidity ethereum smart contract web3 defi nft blockchain hardhat truffle
+Security Analyst,security siem threat intelligence monitoring ids ips vulnerability assessment incident response
+Security Architect,security architecture zero trust network firewall ssl tls pki encryption design
+Ethical Hacker,penetration testing kali linux metasploit burp suite ctf vulnerability owasp
+Penetration Tester,kali nmap metasploit burp pen test owasp red team exploit
+Cybersecurity Analyst,cyber security threat siem vulnerability scanning compliance iso nist
+Cloud Security Engineer,cloud security aws azure gcp iam zero trust compliance devsecops
+QA Automation Engineer,selenium pytest junit automation testing ci cd regression playwright api testing
+Database Administrator,sql postgresql mysql oracle dba indexing query optimization backup replication
+Network Engineer,cisco networking tcp ip routing switching ospf bgp vpn firewall
+Systems Administrator,linux windows server active directory networking bash powershell
+UI/UX Designer,figma sketch wireframe prototype user research design thinking usability accessibility
+Web Developer,html css javascript react php wordpress nodejs web responsive
+Product Manager,product roadmap agile scrum user stories backlog prioritization okr stakeholder
+Business Analyst,requirements analysis uml process modeling sql reporting stakeholder management
+Project Manager,pmp agile scrum waterfall budget risk jira timeline milestone
+Scrum Master,scrum agile sprint planning retrospective jira kanban facilitation
+Technical Writer,documentation api docs markdown technical writing confluence user guides
+Prompt Engineer,prompt engineering llm gpt openai langchain ai chatbot fine tuning rag
+Virtual Reality Developer,unity unreal vr ar c# 3d spatial computing xr metaverse
+Game Designer,unity unreal c# game mechanics level design player experience
+Data Analyst,sql excel python pandas tableau power bi dashboard kpi reporting
+Interaction Designer,interaction design ux prototyping wireframe accessibility hci figma
+Product Designer,product design ux ui figma research iteration prototyping
+Digital Forensics Analyst,forensics memory disk imaging evidence chain of custody malware
+Mechanical Engineer,cad solidworks ansys matlab mechanical design manufacturing tolerancing
+Civil Engineer,autocad structural analysis soil mechanics construction project management
+Electrical Engineer,circuit design pcb matlab embedded power systems plc scada
+Chemical Engineer,process design thermodynamics reaction engineering aspen matlab
+Aerospace Engineer,cfd ansys matlab flight dynamics propulsion aerodynamics
+Biomedical Engineer,medical devices fda matlab signal processing biomechanics clinical
+Surgeon,surgery clinical medicine anatomy operating procedures patient care
+Physician,diagnosis treatment clinical medicine patient care pharmacology
+Registered Nurse,nursing patient care clinical icu ehr medications
+Financial Analyst,excel financial modeling valuation dcf equity research bloomberg
+Investment Banker,m&a ipo valuation financial modeling capital markets due diligence
+Accountant,accounting bookkeeping tax financial statements auditing excel gaap
+Business Development Manager,sales strategy partnerships crm revenue growth negotiation
+Marketing Director,marketing strategy brand management campaigns seo digital analytics
+SEO Specialist,seo google analytics keyword research content marketing backlinks
+Graphic Designer,photoshop illustrator indesign figma brand identity typography
+University Professor,research teaching academia publications grants curriculum
+Statistician,statistics r python probability regression hypothesis testing
+Psychologist,psychology counseling cbt assessment therapy mental health
+Epidemiologist,public health epidemiology biostatistics r stata clinical trials
+Policy Analyst,policy research analysis legislation stakeholder government
+Environmental Scientist,environmental assessment gis field sampling ecology regulations
+Supply Chain Analyst,supply chain logistics erp sap inventory forecasting procurement
+Human Resources Manager,recruitment hr onboarding performance management payroll hris

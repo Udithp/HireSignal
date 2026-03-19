@@ -1,0 +1,70 @@
+Category,Keywords
+Full Stack Developer,angular,react,nextjs,next js,typescript,javascript,nodejs,mongodb,fullstack,full stack,rest api,html,css,tailwind,express,frontend,backend
+Backend Engineer,fastapi,nodejs,python,java,rest api,microservices,django,flask,postgresql,mysql,redis,docker,api
+Frontend Developer,react,angular,vue,html,css,tailwind,javascript,typescript,ui,figma,responsive
+Machine Learning Engineer,pytorch,tensorflow,huggingface,hugging face,ml,model,training,neural,accuracy,f1,scikit,transformer
+AI Research Scientist,llm,gpt,bert,research,language model,deep learning,nlp,fine tuning,arxiv
+DevOps Engineer,docker,kubernetes,ci cd,jenkins,terraform,ansible,aws,gcp,azure,linux,bash,pipeline
+Software Engineer,algorithms,data structures,oop,git,agile,system design,software development
+Data Scientist,pandas,numpy,statistics,data analysis,visualization,sklearn,prediction,regression
+Cybersecurity Analyst,security,threat,vulnerability,siem,penetration,owasp,encryption,firewall
+Embedded Systems Engineer,embedded,firmware,microcontroller,rtos,c++,arm,arduino,iot
+Mobile App Developer,flutter,react native,android,ios,swift,kotlin,mobile
+Blockchain Developer,solidity,ethereum,smart contract,web3,defi,nft,blockchain
+Data Engineer,spark,kafka,airflow,etl,pipeline,data warehouse,bigquery,dbt
+QA Automation Engineer,selenium,pytest,automation testing,regression,playwright,test cases
+Robotics Engineer,ros,robot,kinematics,sensors,actuators,simulation,gazebo
+Cloud Architect,aws,azure,gcp,terraform,serverless,cloud,lambda,s3,vpc
+UI/UX Designer,figma,sketch,wireframe,prototype,user research,design thinking,ux,ui
+Data Analyst,sql,excel,tableau,power bi,dashboard,kpi,reporting,pivot
+Mechanical Engineer,cad,solidworks,ansys,matlab,mechanical,manufacturing,tolerancing
+Electrical Engineer,circuit,pcb,matlab,embedded,power systems,plc,scada
+Financial Analyst,excel,financial modeling,valuation,dcf,equity,bloomberg,finance
+Product Manager,product,roadmap,user stories,backlog,okr,stakeholder,prioritization
+Graphic Designer,photoshop,illustrator,indesign,figma,brand,typography,design
+NLP Engineer,nlp,huggingface,transformers,bert,gpt,spacy,nltk,text classification,sentiment
+Computer Vision Engineer,opencv,pytorch,tensorflow,cnn,image classification,object detection,yolo,segmentation
+MLOps Engineer,mlflow,kubeflow,docker,kubernetes,model serving,mlops,experiment tracking
+Site Reliability Engineer,sre,reliability,slo,sla,prometheus,grafana,incident,postmortem
+Network Engineer,cisco,networking,tcp ip,routing,switching,ospf,bgp,vpn,firewall
+Systems Administrator,linux,windows server,active directory,powershell,bash,sysadmin
+Database Administrator,dba,sql,postgresql,mysql,oracle,indexing,query optimization,replication
+Security Architect,zero trust,firewall,ssl,tls,pki,encryption,security architecture
+Penetration Tester,kali,nmap,metasploit,burp,pen test,red team,exploit
+Cloud Security Engineer,cloud security,iam,devsecops,compliance,zero trust
+Firmware Engineer,firmware,bare metal,bootloader,driver,uart,spi,i2c
+Big Data Developer,hadoop,hive,hdfs,flink,bigdata,scala
+Data Architect,data modeling,architecture,warehouse,lake,erp,metadata,governance
+Android Developer,android,kotlin,android studio,material design,firebase
+iOS Developer,swift,xcode,objective-c,cocoa,app store
+Game Designer,unity,unreal,game mechanics,level design,player experience
+Virtual Reality Developer,vr,ar,xr,metaverse,spatial computing,unity,unreal
+Automation Engineer,rpa,robot framework,selenium,automation
+Technical Writer,documentation,api docs,markdown,confluence,user guides
+Scrum Master,scrum,sprint planning,retrospective,kanban,facilitation
+Project Manager,pmp,waterfall,budget,risk,jira,timeline,milestone
+Business Analyst,requirements,uml,process modeling,reporting,stakeholder
+Prompt Engineer,prompt engineering,langchain,openai,chatbot,rag
+Product Designer,product design,figma,research,iteration,prototyping
+Interaction Designer,interaction design,hci,wireframe,accessibility
+Digital Forensics Analyst,forensics,disk imaging,evidence,chain of custody,malware
+Biomedical Engineer,medical devices,fda,biomechanics,clinical,signal processing
+Aerospace Engineer,cfd,flight dynamics,propulsion,aerodynamics
+Chemical Engineer,thermodynamics,reaction engineering,aspen
+Civil Engineer,autocad,structural analysis,soil mechanics,construction
+Surgeon,surgery,anatomy,operating,patient care
+Physician,diagnosis,treatment,pharmacology,clinical medicine
+Registered Nurse,nursing,icu,ehr,medications,patient care
+Investment Banker,m&a,ipo,capital markets,due diligence
+Accountant,accounting,bookkeeping,tax,auditing,gaap
+Business Development Manager,sales,partnerships,crm,revenue growth,negotiation
+Marketing Director,marketing strategy,brand management,campaigns,seo,digital analytics
+SEO Specialist,seo,keyword research,content marketing,backlinks,google analytics
+University Professor,teaching,academia,publications,grants,curriculum
+Statistician,statistics,r,probability,regression,hypothesis testing
+Psychologist,psychology,counseling,cbt,therapy,mental health
+Epidemiologist,epidemiology,biostatistics,stata,clinical trials,public health
+Policy Analyst,policy,legislation,stakeholder,government
+Environmental Scientist,environmental assessment,gis,ecology,field sampling
+Supply Chain Analyst,supply chain,logistics,erp,sap,inventory,procurement
+Human Resources Manager,recruitment,hr,onboarding,performance management,payroll,hris
