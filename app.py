@@ -131,7 +131,7 @@ hr{display:none !important;}
 .jb-hi{background:var(--em-dim);color:var(--emerald);border:1px solid var(--em-line);}
 .jb-mid{background:var(--am-dim);color:var(--amber);border:1px solid var(--am-line);}
 .jb-lo{background:var(--b2);color:var(--t3);border:1px solid var(--b1);}
-.jcard-desc{grid-column:2/-1;padding:.6rem 1.2rem 1rem;font-size:.78rem;color:var(--t3);line-height:1.7;border-top:1px solid var(--b2);font-weight:300;}
+.jcard-desc{grid-column:2/-1;padding:.85rem 1.2rem 1.1rem;font-size:.83rem;color:var(--t2);line-height:1.85;border-top:1px solid var(--b2);font-weight:300;letter-spacing:.01em;}
 .skills-row{grid-column:2/-1;padding:.3rem 1.2rem .7rem;display:flex;flex-wrap:wrap;gap:4px;border-top:1px solid var(--b2);}
 .skill-pill{display:inline-block;padding:2px 8px;border-radius:var(--r1);font-family:'Geist Mono',monospace;font-size:.52rem;border:1px solid var(--p-line);color:var(--p2);background:var(--p-dim);}
 [data-testid="stDataFrame"]>div{border:1px solid var(--b1) !important;border-radius:var(--r3) !important;overflow:hidden !important;box-shadow:var(--shb) !important;}
@@ -829,8 +829,7 @@ if st.session_state.pg == "cand":
                           (("jb-mid", f"Moderate {sc2}%") if sc2 >= 3 else
                            ("jb-lo",  f"Weak {sc2}%")))
                 desc  = str(row.get("Job_Description", "")).strip() or "No description available."
-                short = ((desc[:300] + "...") if len(desc) > 300 else desc)
-                short = short.replace("<", "&lt;").replace(">", "&gt;")
+                short = desc.replace("<", "&lt;").replace(">", "&gt;")
                 domain_str = str(row.get("Domain", "")).strip()
                 dom_tag = (f'<div class="jcard-domain">&#9670; {domain_str}</div>'
                            if domain_str and domain_str.lower() not in ("nan","") else "")
