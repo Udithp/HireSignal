@@ -102,6 +102,7 @@ hr{display:none !important;}
 .cls-hdr::after{content:'';position:absolute;bottom:-1px;left:1.8rem;width:40px;height:1px;background:var(--p);}
 .cls-kicker{font-family:'Geist Mono',monospace;font-size:.52rem;letter-spacing:.18em;text-transform:uppercase;color:var(--p2);margin-bottom:.4rem;}
 .cls-role{font-family:'Instrument Serif',serif;font-size:1.8rem;font-weight:400;color:var(--t0);}
+.cls-domain{font-family:'Geist Mono',monospace;font-size:.58rem;color:var(--cyan);letter-spacing:.08em;margin-top:4px;}
 .cls-body{padding:1.2rem 1.8rem 1.6rem;}
 .kw-row{display:flex;align-items:center;gap:10px;padding:.6rem 0;border-bottom:1px solid var(--b2);}
 .kw-row:last-child{border-bottom:none;}
@@ -114,6 +115,7 @@ hr{display:none !important;}
 .chart-panel{background:var(--bg1);border:1px solid var(--b1);border-radius:var(--r3);padding:1.6rem 1.6rem 1.2rem;z-index:5;box-shadow:var(--shb);}
 .chart-k{font-family:'Geist Mono',monospace;font-size:.52rem;letter-spacing:.18em;text-transform:uppercase;color:var(--t3);margin-bottom:.3rem;}
 .chart-t{font-family:'Instrument Serif',serif;font-size:1.1rem;color:var(--t0);margin-bottom:1rem;}
+.domain-badge{display:inline-flex;align-items:center;gap:6px;background:var(--cyan-dim);border:1px solid var(--cyan-line);border-radius:100px;padding:3px 10px;font-family:'Geist Mono',monospace;font-size:.55rem;color:var(--cyan);margin-top:6px;}
 .jcard{display:grid;grid-template-columns:60px 1fr auto;grid-template-rows:auto auto;background:var(--bg1);border:1px solid var(--b1);border-radius:var(--r3);overflow:hidden;margin-bottom:8px;box-shadow:var(--sha);position:relative;transition:border-color .25s,box-shadow .25s,transform .25s var(--spring);}
 .jcard::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--p),var(--cyan));opacity:0;transition:opacity .25s;}
 .jcard:hover{border-color:var(--p-line);box-shadow:var(--shg),var(--shb);transform:translateX(4px) translateY(-1px);}
@@ -123,12 +125,15 @@ hr{display:none !important;}
 .jcard-body{padding:1rem 1.2rem .35rem;}
 .jcard-t{font-family:'Instrument Serif',serif;font-size:1.05rem;color:var(--t0);margin-bottom:2px;}
 .jcard-c{font-family:'Geist Mono',monospace;font-size:.58rem;color:var(--t3);}
+.jcard-domain{font-family:'Geist Mono',monospace;font-size:.52rem;color:var(--cyan);margin-top:2px;}
 .jcard-score{padding:1rem 1.2rem .35rem;}
 .jbadge{display:inline-flex;align-items:center;padding:4px 10px;border-radius:100px;font-family:'Geist Mono',monospace;font-size:.6rem;white-space:nowrap;}
 .jb-hi{background:var(--em-dim);color:var(--emerald);border:1px solid var(--em-line);}
 .jb-mid{background:var(--am-dim);color:var(--amber);border:1px solid var(--am-line);}
 .jb-lo{background:var(--b2);color:var(--t3);border:1px solid var(--b1);}
 .jcard-desc{grid-column:2/-1;padding:.6rem 1.2rem 1rem;font-size:.78rem;color:var(--t3);line-height:1.7;border-top:1px solid var(--b2);font-weight:300;}
+.skills-row{grid-column:2/-1;padding:.3rem 1.2rem .7rem;display:flex;flex-wrap:wrap;gap:4px;border-top:1px solid var(--b2);}
+.skill-pill{display:inline-block;padding:2px 8px;border-radius:var(--r1);font-family:'Geist Mono',monospace;font-size:.52rem;border:1px solid var(--p-line);color:var(--p2);background:var(--p-dim);}
 [data-testid="stDataFrame"]>div{border:1px solid var(--b1) !important;border-radius:var(--r3) !important;overflow:hidden !important;box-shadow:var(--shb) !important;}
 [data-testid="stDataFrame"] thead tr th{background:var(--bg2) !important;color:var(--t3) !important;font-family:'Geist Mono',monospace !important;font-size:.54rem !important;letter-spacing:.18em !important;text-transform:uppercase !important;padding:12px 18px !important;border-bottom:1px solid var(--b1) !important;border-right:none !important;font-weight:400 !important;}
 [data-testid="stDataFrame"] tbody tr td{background:var(--bg1) !important;color:var(--t1) !important;font-family:'Geist',sans-serif !important;font-size:.84rem !important;padding:11px 18px !important;border-bottom:1px solid var(--b2) !important;border-right:none !important;font-weight:300 !important;}
@@ -188,32 +193,6 @@ hr{display:none !important;}
 .kw-cloud{display:flex;flex-wrap:wrap;gap:8px;row-gap:8px;}
 .kw-ctag{display:inline-flex;align-items:center;padding:5px 14px;border-radius:100px;font-family:'Geist Mono',monospace;font-size:.62rem;letter-spacing:.02em;white-space:nowrap;border:1px solid var(--em-line);color:var(--emerald);background:var(--em-dim);transition:background .2s,border-color .2s;}
 .kw-ctag:hover{background:rgba(16,185,129,0.14);border-color:var(--emerald);}
-
-.jda-hdr{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:1px;background:var(--b2);border-bottom:1px solid var(--b1);}
-.jda-meta{background:var(--bg2);padding:1rem 1.4rem;display:flex;flex-direction:column;gap:3px;}
-.jda-meta-k{font-family:"Geist Mono",monospace;font-size:.5rem;letter-spacing:.18em;text-transform:uppercase;color:var(--t3);}
-.jda-meta-v{font-family:"Instrument Serif",serif;font-size:1.25rem;color:var(--t0);line-height:1.1;}
-.jda-meta-v.cyan{color:var(--cyan);}.jda-meta-v.amber{color:var(--amber);}.jda-meta-v.emerald{color:var(--emerald);}
-.jda-body{padding:1.4rem 1.6rem;}
-.jda-section{margin-bottom:1.2rem;}.jda-section:last-child{margin-bottom:0;}
-.jda-section-k{font-family:"Geist Mono",monospace;font-size:.52rem;letter-spacing:.18em;text-transform:uppercase;color:var(--t3);margin-bottom:.5rem;display:flex;align-items:center;gap:8px;}
-.jda-section-k::before{content:"";display:block;width:12px;height:1px;background:var(--p-line);}
-.skill-cloud{display:flex;flex-wrap:wrap;gap:6px;}
-.skill-tag{display:inline-flex;align-items:center;padding:4px 12px;border-radius:100px;font-family:"Geist Mono",monospace;font-size:.6rem;white-space:nowrap;transition:all .2s;}
-.skill-tag.must{border:1px solid var(--p-line);color:var(--p2);background:var(--p-dim);}
-.skill-tag.must:hover{border-color:var(--p);background:rgba(99,102,241,.18);}
-.skill-tag.nice{border:1px solid var(--am-line);color:var(--amber);background:var(--am-dim);}
-.skill-tag.neutral{border:1px solid var(--b1);color:var(--t3);background:var(--b2);}
-.quality-bar{height:6px;background:var(--b1);border-radius:99px;overflow:hidden;margin-top:6px;}
-.quality-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--p),var(--cyan));transition:width .8s var(--out);}
-.jda-cat-row{display:flex;align-items:center;gap:8px;padding:.4rem 0;border-bottom:1px solid var(--b2);}.jda-cat-row:last-child{border-bottom:none;}
-.jda-cat-bar-track{flex:1;height:3px;background:var(--b1);border-radius:99px;overflow:hidden;}
-.jda-cat-bar-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--cyan),var(--p2));}
-.jda-cat-name{font-size:.78rem;color:var(--t2);min-width:170px;font-weight:300;}.jda-cat-name.top{color:var(--t0);font-weight:500;}
-.jda-cat-score{font-family:"Geist Mono",monospace;font-size:.6rem;color:var(--p2);}
-.tl-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:6rem 2rem 5rem;text-align:center;z-index:5;}
-.tl-empty-h{font-family:'Instrument Serif',serif;font-size:1.9rem;color:var(--t0);margin-bottom:.6rem;letter-spacing:-.02em;}
-.tl-empty-p{font-size:.86rem;color:var(--t3);line-height:1.75;font-weight:300;max-width:340px;}
 .jd-analysis-panel{background:var(--bg1);border:1px solid var(--b1);border-radius:var(--r3);overflow:hidden;margin:1.2rem 0 0;box-shadow:var(--shb);position:relative;z-index:5;}
 .jd-analysis-panel::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--p),var(--cyan),var(--emerald));}
 .jda-hdr{display:flex;flex-wrap:wrap;align-items:center;gap:0;border-bottom:1px solid var(--b1);background:linear-gradient(135deg,var(--bg2),var(--bg1));}
@@ -256,308 +235,277 @@ hr{display:none !important;}
 """, unsafe_allow_html=True)
 
 
-# ── DATA LOADERS ──────────────────────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
+#  DATA LOADER  —  Single source of truth: job_skill_intelligence_dataset.csv
+# ══════════════════════════════════════════════════════════════════════════════
 BASE = os.path.dirname(os.path.abspath(__file__))
+DATASET_FILE = os.path.join(BASE, "job_skill_intelligence_dataset.csv")
 
 @st.cache_data
-def load_jobs():
-    p = os.path.join(BASE, "jobs.csv")
-    if not os.path.exists(p):
-        return pd.DataFrame(columns=["Job_Title", "Category", "Job_Description"])
-    df = pd.read_csv(p)
-    df.drop_duplicates(inplace=True)
+def load_dataset():
+    """
+    Load the single master dataset.
+    Derives jobs_df, SKP (skill profiles), CATK (category keywords),
+    SIGNALS (skill signals), and DOMAIN_MAP from one file.
+    """
+    if not os.path.exists(DATASET_FILE):
+        st.error(f"Dataset not found: {DATASET_FILE}\nPlace job_skill_intelligence_dataset.csv in the same folder as app.py.")
+        st.stop()
+
+    df = pd.read_csv(DATASET_FILE)
+    df.drop_duplicates(subset=["Job_Title"], inplace=True)
     df.reset_index(drop=True, inplace=True)
-    return df
 
-@st.cache_data
-def load_skill_profiles():
-    p = os.path.join(BASE, "skill_profiles.csv")
-    if not os.path.exists(p):
-        return {}
-    df = pd.read_csv(p)
-    return dict(zip(df["Job_Title"].str.strip(), df["Skills"].fillna("")))
+    # ── 1. jobs_df — for TF-IDF job matching ─────────────────────────────────
+    jobs_df = df[["Job_Title", "Category", "Domain", "Job_Description", "Skills"]].copy()
+    jobs_df.fillna("", inplace=True)
 
-@st.cache_data
-def load_category_keywords():
-    """
-    Loads category_keywords.csv.
-    Returns dict: {category: [keywords sorted longest-first]}.
-    Longest keywords first so multi-word phrases match before their sub-terms.
-    """
-    p = os.path.join(BASE, "category_keywords.csv")
-    if not os.path.exists(p):
-        return {}
-    df = pd.read_csv(p)
-    result = {}
+    # ── 2. SKP — skill profiles dict {job_title: skills_string} ──────────────
+    skp = {}
     for _, r in df.iterrows():
-        cat = r.get("Category", "")
-        if pd.isna(cat) or str(cat).strip().lower() in ("", "nan", "none"):
+        jt = str(r.get("Job_Title", "")).strip()
+        sk = str(r.get("Skills", "")).strip()
+        if jt and sk and sk.lower() not in ("nan", ""):
+            skp[jt] = sk
+
+    # ── 3. CATK — category keywords dict {category: [kw, ...]} ───────────────
+    catk = {}
+    for _, r in df.iterrows():
+        cat = str(r.get("Category", "")).strip()
+        if not cat or cat.lower() in ("nan", "none", ""):
             continue
-        raw = r.get("Keywords", "")
-        kws = [k.strip().lower() for k in str(raw if not pd.isna(raw) else "").split(",") if k.strip()]
+        raw_kw = str(r.get("Keywords", "")).strip()
+        if raw_kw and raw_kw.lower() not in ("nan", ""):
+            kws = [k.strip().lower() for k in raw_kw.split(",") if k.strip()]
+        else:
+            # Fall back to Skills column
+            raw_sk = str(r.get("Skills", "")).strip()
+            kws = [k.strip().lower() for k in raw_sk.split() if len(k.strip()) > 2]
         if kws:
-            # sort longest first so multi-word phrases are checked before sub-words
-            kws.sort(key=len, reverse=True)
-            result[str(cat).strip()] = kws
-    return result
+            kws.sort(key=len, reverse=True)  # longest-first for phrase matching
+            catk[cat] = kws
 
-@st.cache_data
-def load_skill_signals():
-    """
-    Loads skill_signals.csv (domain, signal).
-    Falls back to extracting all unique keywords from category_keywords.csv
-    so the app always has signals even without a separate file.
-    Returns list of signals sorted longest-first (multi-word phrases first).
-    """
-    # ── Try dedicated skill_signals.csv first ────────────────────────────────
-    p = os.path.join(BASE, "skill_signals.csv")
+    # ── 4. SIGNALS — all unique signals from Domain_Signals + Keywords ────────
     signals_set = set()
-    if os.path.exists(p):
-        try:
-            df = pd.read_csv(p)
-            if "signal" in df.columns:
-                for s in df["signal"].dropna().str.strip().tolist():
-                    if s:
-                        signals_set.add(s.lower())
-        except Exception:
-            pass
-
-    # ── Always supplement with every keyword from category_keywords.csv ───────
-    # This guarantees signal coverage matches whatever keywords exist
-    if CATK:
-        for kws in CATK.values():
-            for k in kws:
+    for _, r in df.iterrows():
+        # From Domain_Signals column
+        ds = str(r.get("Domain_Signals", "")).strip()
+        if ds and ds.lower() not in ("nan", ""):
+            for s in ds.split(","):
+                s = s.strip()
+                if s and len(s) > 1:
+                    signals_set.add(s.lower())
+        # From Keywords column
+        kw = str(r.get("Keywords", "")).strip()
+        if kw and kw.lower() not in ("nan", ""):
+            for k in kw.split(","):
+                k = k.strip()
                 if k and len(k) > 1:
                     signals_set.add(k.lower())
+        # From Skills column
+        sk = str(r.get("Skills", "")).strip()
+        if sk and sk.lower() not in ("nan", ""):
+            for s in sk.split():
+                s = s.strip()
+                if len(s) > 2:
+                    signals_set.add(s.lower())
 
-    # ── Sort: longest first so "react native" matches before "react" ──────────
     signals = sorted(signals_set, key=len, reverse=True)
-    return signals
 
-jobs_df = load_jobs()
-SKP     = load_skill_profiles()
-CATK    = load_category_keywords()
-SIGNALS = load_skill_signals()
+    # ── 5. DOMAIN_MAP — {job_title: domain} ──────────────────────────────────
+    domain_map = {}
+    for _, r in df.iterrows():
+        jt = str(r.get("Job_Title", "")).strip()
+        dm = str(r.get("Domain", "")).strip()
+        if jt and dm and dm.lower() not in ("nan", ""):
+            domain_map[jt] = dm
+
+    return df, jobs_df, skp, catk, signals, domain_map
+
+
+# Load everything from the single dataset
+MASTER_DF, jobs_df, SKP, CATK, SIGNALS, DOMAIN_MAP = load_dataset()
 
 TJ = len(jobs_df)
 TT = len(SKP)
-TC = jobs_df["Category"].nunique() if "Category" in jobs_df.columns and len(jobs_df) > 0 else len(CATK)
+TC = jobs_df["Domain"].nunique() if "Domain" in jobs_df.columns else jobs_df["Category"].nunique()
 
-# ── STOPWORDS for signal extraction (generic resume/JD words to filter out) ──
+
+# ══════════════════════════════════════════════════════════════════════════════
+#  STOPWORDS
+# ══════════════════════════════════════════════════════════════════════════════
 _SIGNAL_STOPWORDS = {
-    "experience", "experiences", "using", "work", "working", "strong",
-    "knowledge", "understanding", "ability", "skills", "skill", "good",
-    "excellent", "proficient", "proficiency", "familiar", "familiarity",
-    "develop", "developing", "developed", "developer", "build", "building",
-    "built", "design", "designing", "designed", "manage", "managing",
-    "managed", "create", "creating", "created", "implement", "implementing",
-    "implemented", "maintain", "maintaining", "maintained", "support",
-    "supporting", "supported", "team", "teams", "project", "projects",
-    "environment", "application", "applications", "system", "systems",
-    "solution", "solutions", "service", "services", "platform", "platforms",
-    "tool", "tools", "technology", "technologies", "code", "coding",
-    "software", "hardware", "data", "stack", "based", "driven", "oriented",
-    "focused", "related", "various", "multiple", "different", "including",
-    "responsible", "responsibilities", "requirement", "requirements",
-    "following", "least", "years", "year", "month", "months",
-    "bachelor", "master", "degree", "certification", "certified",
-    "plus", "preferred", "required", "bonus", "nice",
+    "experience","experiences","using","work","working","strong","knowledge",
+    "understanding","ability","skills","skill","good","excellent","proficient",
+    "proficiency","familiar","familiarity","develop","developing","developed",
+    "developer","build","building","built","design","designing","designed",
+    "manage","managing","managed","create","creating","created","implement",
+    "implementing","implemented","maintain","maintaining","maintained","support",
+    "supporting","supported","team","teams","project","projects","environment",
+    "application","applications","system","systems","solution","solutions",
+    "service","services","platform","platforms","tool","tools","technology",
+    "technologies","code","coding","software","hardware","data","stack","based",
+    "driven","oriented","focused","related","various","multiple","different",
+    "including","responsible","responsibilities","requirement","requirements",
+    "following","least","years","year","month","months","bachelor","master",
+    "degree","certification","certified","plus","preferred","required","bonus","nice",
 }
 
 
-# ── SIGNAL EXTRACTOR ──────────────────────────────────────────────────────────
-def top_kw(txt, n=16):
-    """
-    Extracts the top-n skill/technology signals from text.
-    - Searches for all known signals (from skill_signals + category_keywords)
-    - Filters generic stopwords
-    - Returns multi-word phrases before single tokens (longest-first matching)
-    - Falls back to TF-IDF unigrams only if zero signals found
-    """
-    if not txt or not txt.strip():
-        return []
-
-    # Use soft-cleaned text so "node.js", "c++", "ci/cd" etc. survive
-    tl = _clean_for_match(txt)
-    matched, seen = [], set()
-
-    for sig in SIGNALS:
-        sl = sig.lower()
-        # Skip generic words
-        if sl in _SIGNAL_STOPWORDS:
-            continue
-        # Skip very short single chars
-        if len(sl) < 2:
-            continue
-        if sl in tl and sl not in seen:
-            matched.append(sig)
-            seen.add(sl)
-        if len(matched) >= n:
-            break
-
-    # Deduplicate: remove a signal if it's a sub-string of an already-matched one
-    # e.g. if "react native" matched, skip bare "react" and "native"
-    deduped = []
-    for sig in matched:
-        sl = sig.lower()
-        if not any(sl != other.lower() and sl in other.lower() for other in matched):
-            deduped.append(sig)
-
-    return deduped[:n] if deduped else _fallback_kw(txt, n)
-
-
-def _fallback_kw(txt, n=8):
-    """Last-resort: TF-IDF unigrams filtered by stopwords."""
-    try:
-        v = CountVectorizer(stop_words="english", max_features=300,
-                            token_pattern=r"[a-zA-Z0-9][a-zA-Z0-9\.\+\#\/\-]{1,}")
-        v.fit([txt])
-        w = v.get_feature_names_out()
-        c = v.transform([txt]).toarray()[0]
-        candidates = [(x, cnt) for x, cnt in sorted(zip(w, c), key=lambda x: -x[1])
-                      if x.lower() not in _SIGNAL_STOPWORDS and len(x) > 2]
-        return [x for x, _ in candidates[:n]]
-    except:
-        return []
-
-
-# ── HELPERS ───────────────────────────────────────────────────────────────────
-def clean(txt):
+# ══════════════════════════════════════════════════════════════════════════════
+#  HELPERS
+# ══════════════════════════════════════════════════════════════════════════════
+def clean(txt: str) -> str:
     t = str(txt).lower()
     t = re.sub(r'http\S+|\S+@\S+', ' ', t)
     t = re.sub(r'[^a-zA-Z ]', ' ', t)
     return re.sub(r'\s+', ' ', t).strip()
 
-def pdf_text(f):
+def _clean_for_match(txt: str) -> str:
+    """Soft clean — preserves c++, node.js, ci/cd, gpt-4 etc."""
+    t = str(txt).lower()
+    t = re.sub(r'http\S+|\S+@\S+', ' ', t)
+    t = re.sub(r'[^a-z0-9 \.\-\/\+#]', ' ', t)
+    return re.sub(r'\s+', ' ', t).strip()
+
+def pdf_text(f) -> str:
     try:
         with pdfplumber.open(f) as pdf:
             return ' '.join(pg.extract_text() or '' for pg in pdf.pages)
     except:
         return ""
 
-# ── CLASSIFICATION ENGINE ────────────────────────────────────────────────────
+
+# ══════════════════════════════════════════════════════════════════════════════
+#  SIGNAL EXTRACTOR
+# ══════════════════════════════════════════════════════════════════════════════
+def top_kw(txt: str, n: int = 16) -> list:
+    if not txt or not txt.strip():
+        return []
+    tl = _clean_for_match(txt)
+    matched, seen = [], set()
+    for sig in SIGNALS:
+        sl = sig.lower()
+        if sl in _SIGNAL_STOPWORDS or len(sl) < 2:
+            continue
+        if sl in tl and sl not in seen:
+            matched.append(sig)
+            seen.add(sl)
+        if len(matched) >= n:
+            break
+    # Remove sub-string duplicates
+    deduped = [s for s in matched
+               if not any(s.lower() != o.lower() and s.lower() in o.lower() for o in matched)]
+    return deduped[:n] if deduped else _fallback_kw(txt, n)
+
+def _fallback_kw(txt: str, n: int = 8) -> list:
+    try:
+        v = CountVectorizer(stop_words="english", max_features=300,
+                            token_pattern=r"[a-zA-Z0-9][a-zA-Z0-9\.\+\#\/\-]{1,}")
+        v.fit([txt])
+        w = v.get_feature_names_out()
+        c = v.transform([txt]).toarray()[0]
+        cands = [(x, cnt) for x, cnt in sorted(zip(w, c), key=lambda x: -x[1])
+                 if x.lower() not in _SIGNAL_STOPWORDS and len(x) > 2]
+        return [x for x, _ in cands[:n]]
+    except:
+        return []
+
+
+# ══════════════════════════════════════════════════════════════════════════════
+#  CLASSIFICATION ENGINE
+# ══════════════════════════════════════════════════════════════════════════════
 def _kw_weight(kw: str) -> float:
-    """
-    Weight a keyword by specificity:
-      - multi-word phrases  → 2.0  (e.g. "machine learning", "react native")
-      - medium tokens 5-10 chars → 1.5  (e.g. "pytorch", "docker")
-      - short tokens < 5 chars  → 1.0  (e.g. "sql", "aws", "r")
-    """
     words = kw.split()
-    if len(words) > 1:
-        return 2.0
-    if len(kw) >= 5:
-        return 1.5
+    if len(words) > 1:   return 2.0
+    if len(kw) >= 5:     return 1.5
     return 1.0
 
-def _clean_for_match(txt: str) -> str:
+def predict_cat(rc: str, raw_text: str = ""):
     """
-    Softer clean: keeps hyphens, slashes, dots and digits so tokens like
-    'c++', 'node.js', 'ci/cd', 'gpt-4', '3nf' still match.
-    """
-    t = str(txt).lower()
-    t = re.sub(r'http\S+|\S+@\S+', ' ', t)          # strip urls/emails
-    t = re.sub(r'[^a-z0-9 \.\-\/\+#]', ' ', t)      # keep useful punctuation
-    return re.sub(r'\s+', ' ', t).strip()
-
-def predict_cat(rc, raw_text=""):
-    """
-    3-pass hybrid classifier — returns (category, top5, method, debug).
-
-    Pass 1 — Weighted keyword scoring on a 'soft-cleaned' resume string.
-              Uses substring search (no \b) for short tokens and tech names
-              that \b breaks (e.g. 'c++', 'node.js', '.net').
-              Multi-word phrases score 2×, medium tokens 1.5×, short 1×.
-              Normalised by sqrt(total_keywords) to avoid inflation in large
-              categories.
-
-    Pass 2 — TF-IDF cosine similarity against each category's keyword bag.
-              Triggered when every weighted score == 0 (completely empty resume
-              or zero vocabulary overlap).
-
-    Pass 3 — Raw substring fallback with no normalisation as last resort.
+    3-pass hybrid classifier.
+    Returns (category, top5, method, debug_dict, detected_domain)
     """
     if not CATK:
-        return "Unknown", [], "no_data", {}
+        return "Unknown", [], "no_data", {}, ""
 
-    # Use the softer-cleaned text for matching so punctuation survives
-    rl = _clean_for_match(raw_text if raw_text else rc)
-    # Also keep a plain alpha version for TF-IDF fallback
-    rc_plain = rc  # already clean()'d
+    rl       = _clean_for_match(raw_text if raw_text else rc)
+    rc_plain = rc
 
-    # ── Pass 1: weighted keyword scoring ─────────────────────────────────────
-    sc    = {}
-    debug = {}
+    # ── Pass 1: Weighted keyword scoring ─────────────────────────────────────
+    sc, debug = {}, {}
     for cat, kws in CATK.items():
-        if not cat or str(cat).strip().lower() in ("nan", "none", ""):
+        if not cat or cat.strip().lower() in ("nan", "none", ""):
             continue
-        score = 0.0
-        hits  = []
-        # kws already sorted longest-first by load_category_keywords()
-        seen_spans = []   # avoid double-counting overlapping matches
+        score, hits, seen_spans = 0.0, [], []
         for k in kws:
-            kl = k.lower()
-            # substring search — handles 'c++', 'node.js', 'ci/cd' etc.
+            kl  = k.lower()
             idx = rl.find(kl)
             if idx == -1:
                 continue
-            # simple overlap check: skip if this span is already covered
-            end = idx + len(kl)
+            end      = idx + len(kl)
             overlaps = any(s <= idx < e or s < end <= e for s, e in seen_spans)
             if overlaps:
                 continue
             seen_spans.append((idx, end))
             w = _kw_weight(k)
             score += w
-            hits.append(f"{k} ({w:.0f})")
-        # normalise to prevent large keyword lists from dominating
-        n_kws  = max(len(kws), 1)
+            hits.append(f"{k}({w:.0f})")
+        n_kws      = max(len(kws), 1)
         sc[cat]    = round(score / (n_kws ** 0.5), 3)
         debug[cat] = hits
 
     ranked = sorted(sc.items(), key=lambda x: -x[1])
 
     if ranked and ranked[0][1] > 0:
-        return ranked[0][0], ranked[:5], "keyword", debug
+        best_cat   = ranked[0][0]
+        best_domain = DOMAIN_MAP.get(best_cat, "")
+        return best_cat, ranked[:5], "keyword", debug, best_domain
 
-    # ── Pass 2: TF-IDF cosine on keyword bags ────────────────────────────────
+    # ── Pass 2: TF-IDF cosine ─────────────────────────────────────────────────
     try:
         cat_names = list(CATK.keys())
         cat_docs  = [" ".join(CATK[c]) for c in cat_names]
         if rc_plain.strip():
             corpus = [rc_plain] + cat_docs
-            vec    = TfidfVectorizer(stop_words="english", ngram_range=(1, 2),
-                                     max_features=30000)
+            vec    = TfidfVectorizer(stop_words="english", ngram_range=(1, 2), max_features=30000)
             mat    = vec.fit_transform(corpus)
             sims   = cosine_similarity(mat[0:1], mat[1:]).flatten()
-            tfidf_ranked = sorted(zip(cat_names, (sims * 100).round(2)),
-                                  key=lambda x: -x[1])
+            tfidf_ranked = sorted(zip(cat_names, (sims * 100).round(2)), key=lambda x: -x[1])
             if tfidf_ranked and tfidf_ranked[0][1] > 0:
-                return tfidf_ranked[0][0], tfidf_ranked[:5], "tfidf", debug
+                best_cat    = tfidf_ranked[0][0]
+                best_domain = DOMAIN_MAP.get(best_cat, "")
+                return best_cat, tfidf_ranked[:5], "tfidf", debug, best_domain
     except Exception:
         pass
 
-    # ── Pass 3: raw substring (no normalisation) ─────────────────────────────
+    # ── Pass 3: Raw substring fallback ───────────────────────────────────────
     sc3 = {}
     for cat, kws in CATK.items():
-        if not cat or str(cat).strip().lower() in ("nan", "none", ""):
+        if not cat or cat.strip().lower() in ("nan", "none", ""):
             continue
-        hits3 = [k for k in kws if k.lower() in rl]
-        sc3[cat] = len(hits3)
+        sc3[cat] = len([k for k in kws if k.lower() in rl])
     ranked3 = sorted(sc3.items(), key=lambda x: -x[1])
     if ranked3 and ranked3[0][1] > 0:
-        return ranked3[0][0], ranked3[:5], "substring", debug
+        best_cat    = ranked3[0][0]
+        best_domain = DOMAIN_MAP.get(best_cat, "")
+        return best_cat, ranked3[:5], "substring", debug, best_domain
 
-    return "No Strong Match", ranked[:5], "none", debug
+    return "No Strong Match", ranked[:5], "none", debug, ""
 
-def top_jobs(rc, df, n=10):
+
+def top_jobs(rc: str, df: pd.DataFrame, n: int = 10) -> pd.DataFrame:
+    """TF-IDF cosine ranking against job_description + skills + title."""
     if df.empty:
         return df
     df = df.copy()
     df["_r"] = df.apply(
-        lambda r: f"{r.get('Job_Title','')} {r.get('Job_Title','')} "
-                  f"{clean(r.get('Job_Description',''))} "
-                  f"{SKP.get(r.get('Job_Title',''), '')}".lower(),
+        lambda r: (
+            f"{r.get('Job_Title','')} {r.get('Job_Title','')} "
+            f"{clean(r.get('Job_Description',''))} "
+            f"{r.get('Skills', '')} "
+            f"{SKP.get(r.get('Job_Title',''), '')}"
+        ).lower(),
         axis=1
     )
     corp = [rc] + df["_r"].tolist()
@@ -567,7 +515,8 @@ def top_jobs(rc, df, n=10):
     df["Match Score"] = (sims * 100).round(2)
     return df.sort_values("Match Score", ascending=False).head(n).reset_index(drop=True)
 
-def rank_resumes(jd, res, n=50):
+
+def rank_resumes(jd: str, res: list, n: int = 50) -> pd.DataFrame:
     if not res:
         return pd.DataFrame()
     corp = [jd] + [r["text"] for r in res]
@@ -577,40 +526,30 @@ def rank_resumes(jd, res, n=50):
     df   = pd.DataFrame({
         "File Name":   [r["name"] for r in res],
         "Match Score": (sims * 100).round(2),
-        "_text":       [r["text"] for r in res]
+        "_text":       [r["text"] for r in res],
     })
     df["Rank"] = df["Match Score"].rank(ascending=False, method="min").astype(int)
     return df.sort_values("Match Score", ascending=False).head(n).reset_index(drop=True)
 
-def medal(r):
+def medal(r: int) -> str:
     return {1: "GOLD", 2: "SILVER", 3: "BRONZE"}.get(r, "")
 
 
-# ── JD ANALYSIS ENGINE ────────────────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
+#  JD ANALYSIS ENGINE
+# ══════════════════════════════════════════════════════════════════════════════
 def analyse_jd(jd_text: str) -> dict:
-    """
-    Full analysis of a job description. Returns:
-      category, top5, method, required_skills, must_have, nice_to_have,
-      seniority, word_count, char_count, quality_score
-    """
     if not jd_text or not jd_text.strip():
         return {}
 
     raw = jd_text
     rc  = clean(jd_text)
-
-    # Category classification
-    category, top5, method, _ = predict_cat(rc, raw)
-
-    # All signals in JD
+    category, top5, method, _, domain = predict_cat(rc, raw)
     all_signals = top_kw(raw, n=30)
 
-    # Split required vs preferred by scanning for section markers
     jdl = raw.lower()
-    split_markers = [
-        "nice to have", "nice-to-have", "preferred", "bonus", "plus",
-        "desirable", "good to have", "advantageous", "ideally", "would be a plus",
-    ]
+    split_markers = ["nice to have","nice-to-have","preferred","bonus","plus",
+                     "desirable","good to have","advantageous","ideally","would be a plus"]
     split_idx = len(jdl)
     for m in split_markers:
         idx = jdl.find(m)
@@ -619,49 +558,33 @@ def analyse_jd(jd_text: str) -> dict:
 
     required_section  = jdl[:split_idx]
     preferred_section = jdl[split_idx:]
-
     must_have    = [s for s in all_signals if s.lower() in required_section]
-    nice_to_have = [s for s in all_signals
-                    if s.lower() in preferred_section and s not in must_have]
+    nice_to_have = [s for s in all_signals if s.lower() in preferred_section and s not in must_have]
 
-    # Seniority detection
     seniority = "Mid-Level"
-    if any(x in jdl for x in ["10+ years", "10 years", "principal", "distinguished",
-                                "fellow", "vp ", "vice president", "head of"]):
+    if any(x in jdl for x in ["10+ years","10 years","principal","distinguished","fellow","vp ","vice president","head of"]):
         seniority = "Principal / Executive"
-    elif any(x in jdl for x in ["8+ years", "8 years", "senior", "sr.", "staff engineer",
-                                  "lead engineer", "lead developer", "tech lead"]):
+    elif any(x in jdl for x in ["8+ years","8 years","senior","sr.","staff engineer","lead engineer","lead developer","tech lead"]):
         seniority = "Senior"
-    elif any(x in jdl for x in ["0-2 years", "0-1 year", "junior", "jr.", "entry level",
-                                  "entry-level", "graduate", "intern", "fresh"]):
+    elif any(x in jdl for x in ["0-2 years","0-1 year","junior","jr.","entry level","entry-level","graduate","intern","fresh"]):
         seniority = "Junior / Entry"
-    elif any(x in jdl for x in ["3+ years", "3 years", "4 years", "5 years",
-                                  "mid-level", "mid level", "associate"]):
+    elif any(x in jdl for x in ["3+ years","3 years","4 years","5 years","mid-level","mid level","associate"]):
         seniority = "Mid-Level"
 
-    # JD quality score (0-100)
-    wc            = len(raw.split())
-    length_score  = min(40, int(wc / 20))
-    signal_score  = min(40, len(all_signals) * 2)
-    section_score = sum(4 for kw in ["responsibilities", "requirements",
-                                      "qualifications", "skills", "about"]
-                        if kw in jdl)
-    quality = min(100, length_score + signal_score + section_score)
+    wc           = len(raw.split())
+    length_score = min(40, int(wc / 20))
+    signal_score = min(40, len(all_signals) * 2)
+    section_score= sum(4 for kw in ["responsibilities","requirements","qualifications","skills","about"] if kw in jdl)
+    quality      = min(100, length_score + signal_score + section_score)
 
-    return {
-        "category":        category,
-        "top5":            top5,
-        "method":          method,
-        "required_skills": all_signals,
-        "must_have":       must_have,
-        "nice_to_have":    nice_to_have,
-        "seniority":       seniority,
-        "word_count":      wc,
-        "char_count":      len(raw),
-        "quality_score":   quality,
-    }
+    return dict(category=category, domain=domain, top5=top5, method=method,
+                required_skills=all_signals, must_have=must_have, nice_to_have=nice_to_have,
+                seniority=seniority, word_count=wc, char_count=len(raw), quality_score=quality)
 
 
+# ══════════════════════════════════════════════════════════════════════════════
+#  UI HELPERS
+# ══════════════════════════════════════════════════════════════════════════════
 D  = lambda lbl: (f'<div class="tl-divide"><div class="tl-divide-gem"></div>'
                   f'<div class="tl-divide-line"></div>'
                   f'<div class="tl-divide-label">{lbl}</div>'
@@ -671,27 +594,27 @@ KK = lambda k, h: f'<div class="tl-kicker">{k}</div><div class="tl-h">{h}</div>'
 
 
 def render_jd_analysis(jd_text: str):
-    """Render a full JD analysis panel inline."""
     a = analyse_jd(jd_text)
     if not a:
         return
+    q    = a["quality_score"]
+    q_c  = "emerald" if q >= 70 else ("amber" if q >= 40 else "")
+    q_l  = "Excellent" if q >= 70 else ("Good" if q >= 40 else "Needs Work")
+    sc   = "cyan" if a["seniority"] == "Senior" else ("amber" if a["seniority"] == "Principal / Executive" else "")
+    dom  = a.get("domain", "")
+    dom_badge = (f'<span style="font-family:Geist Mono,monospace;font-size:.52rem;'
+                 f'color:var(--cyan);letter-spacing:.08em;">{dom}</span>') if dom else ""
 
-    q   = a["quality_score"]
-    q_c = "emerald" if q >= 70 else ("amber" if q >= 40 else "")
-    q_l = "Excellent" if q >= 70 else ("Good" if q >= 40 else "Needs Work")
-    sen_c = "cyan" if a["seniority"] == "Senior" else ("amber" if a["seniority"] == "Principal / Executive" else "")
-
-    # ── Header metrics ────────────────────────────────────────────────────────
     st.markdown(
         '<div class="jd-analysis-panel anim">'
         '<div class="jda-hdr">'
-        '<div class="jda-meta"><div class="jda-meta-k">Detected Role</div>'
-        f'<div class="jda-meta-v">{a["category"]}</div></div>'
-        '<div class="jda-meta"><div class="jda-meta-k">Seniority</div>'
-        f'<div class="jda-meta-v {sen_c}">{a["seniority"]}</div></div>'
-        '<div class="jda-meta"><div class="jda-meta-k">Word Count</div>'
+        f'<div class="jda-meta"><div class="jda-meta-k">Detected Role</div>'
+        f'<div class="jda-meta-v">{a["category"]}</div>{dom_badge}</div>'
+        f'<div class="jda-meta"><div class="jda-meta-k">Seniority</div>'
+        f'<div class="jda-meta-v {sc}">{a["seniority"]}</div></div>'
+        f'<div class="jda-meta"><div class="jda-meta-k">Word Count</div>'
         f'<div class="jda-meta-v cyan">{a["word_count"]:,}</div></div>'
-        '<div class="jda-meta"><div class="jda-meta-k">JD Quality</div>'
+        f'<div class="jda-meta"><div class="jda-meta-k">JD Quality</div>'
         f'<div class="jda-meta-v {q_c}">{q}/100 '
         f'<span style="font-size:.72rem;font-family:Geist,sans-serif;color:var(--t3);">{q_l}</span></div>'
         f'<div class="quality-bar"><div class="quality-fill" style="width:{q}%"></div></div></div>'
@@ -699,87 +622,59 @@ def render_jd_analysis(jd_text: str):
         unsafe_allow_html=True
     )
 
-    # ── Skills body ────────────────────────────────────────────────────────────
     parts = []
-
-    # Required skills section
     if a["must_have"]:
-        tags = "".join('<span class="skill-tag must">' + s + '</span>' for s in a["must_have"])
-        parts.append(
-            '<div class="jda-section">'
-            '<div class="jda-section-k">Required Skills &nbsp;&middot;&nbsp; '
-            + str(len(a["must_have"])) + ' signals</div>'
-            '<div class="skill-cloud">' + tags + '</div></div>'
-        )
-
-    # Nice-to-have section
+        tags = "".join(f'<span class="skill-tag must">{s}</span>' for s in a["must_have"])
+        parts.append(f'<div class="jda-section"><div class="jda-section-k">Required Skills &middot; {len(a["must_have"])} signals</div><div class="skill-cloud">{tags}</div></div>')
     if a["nice_to_have"]:
-        tags = "".join('<span class="skill-tag nice">' + s + '</span>' for s in a["nice_to_have"])
-        parts.append(
-            '<div class="jda-section">'
-            '<div class="jda-section-k">Preferred / Nice to Have &nbsp;&middot;&nbsp; '
-            + str(len(a["nice_to_have"])) + ' signals</div>'
-            '<div class="skill-cloud">' + tags + '</div></div>'
-        )
-
-    # Flat JD — no split sections found
+        tags = "".join(f'<span class="skill-tag nice">{s}</span>' for s in a["nice_to_have"])
+        parts.append(f'<div class="jda-section"><div class="jda-section-k">Preferred / Nice to Have &middot; {len(a["nice_to_have"])} signals</div><div class="skill-cloud">{tags}</div></div>')
     if not a["must_have"] and not a["nice_to_have"] and a["required_skills"]:
-        tags = "".join('<span class="skill-tag must">' + s + '</span>' for s in a["required_skills"])
-        parts.append(
-            '<div class="jda-section">'
-            '<div class="jda-section-k">Detected Skills &nbsp;&middot;&nbsp; '
-            + str(len(a["required_skills"])) + ' signals</div>'
-            '<div class="skill-cloud">' + tags + '</div></div>'
-        )
-
-    # Category score breakdown
+        tags = "".join(f'<span class="skill-tag must">{s}</span>' for s in a["required_skills"])
+        parts.append(f'<div class="jda-section"><div class="jda-section-k">Detected Skills &middot; {len(a["required_skills"])} signals</div><div class="skill-cloud">{tags}</div></div>')
     if a["top5"]:
         ms   = max(s for _, s in a["top5"]) or 1
         rows = ""
-        for i, (cat, sc) in enumerate(a["top5"]):
-            pct = int(sc / ms * 100) if ms else 0
+        for i, (cat, sc2) in enumerate(a["top5"]):
+            pct = int(sc2 / ms * 100) if ms else 0
             tc  = "top" if i == 0 else ""
             pfx = "&#9658; " if i == 0 else ""
-            scv = str(round(sc, 1)) if isinstance(sc, float) else str(sc)
-            rows += (
-                '<div class="jda-cat-row">'
-                '<span class="jda-cat-name ' + tc + '">' + pfx + cat + '</span>'
-                '<div class="jda-cat-bar-track">'
-                '<div class="jda-cat-bar-fill" style="width:' + str(pct) + '%"></div></div>'
-                '<span class="jda-cat-score">' + scv + '</span>'
-                '</div>'
-            )
-        parts.append(
-            '<div class="jda-section">'
-            '<div class="jda-section-k">Role Category Match</div>' + rows + '</div>'
-        )
+            scv = str(round(sc2, 1)) if isinstance(sc2, float) else str(sc2)
+            rows += (f'<div class="jda-cat-row">'
+                     f'<span class="jda-cat-name {tc}">{pfx}{cat}</span>'
+                     f'<div class="jda-cat-bar-track"><div class="jda-cat-bar-fill" style="width:{pct}%"></div></div>'
+                     f'<span class="jda-cat-score">{scv}</span></div>')
+        parts.append(f'<div class="jda-section"><div class="jda-section-k">Role Category Match</div>{rows}</div>')
 
-    st.markdown(
-        '<div class="jda-body">' + "".join(parts) + '</div></div>',
-        unsafe_allow_html=True
-    )
+    st.markdown(f'<div class="jda-body">{"".join(parts)}</div></div>', unsafe_allow_html=True)
 
-# ── SESSION STATE ─────────────────────────────────────────────────────────────
+
+# ══════════════════════════════════════════════════════════════════════════════
+#  SESSION STATE & NAVBAR
+# ══════════════════════════════════════════════════════════════════════════════
 if "pg" not in st.session_state:
     st.session_state.pg = "cand"
 
-# ── NAVBAR ────────────────────────────────────────────────────────────────────
 pg    = st.session_state.pg
 c_on  = "on" if pg == "cand" else ""
 r_on  = "on" if pg == "rec"  else ""
 c_dot = '<span class="tl-tab-dot"></span>' if pg == "cand" else ""
 r_dot = '<span class="tl-tab-dot"></span>' if pg == "rec"  else ""
+
 st.markdown(f"""
 <div class="tl-nav">
   <div class="tl-brand">
     <div class="tl-logomark"><svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="nlg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#6366f1"/><stop offset="100%" stop-color="#22d3ee"/></linearGradient></defs><circle cx="18" cy="18" r="16" fill="rgba(99,102,241,0.08)" stroke="rgba(99,102,241,0.2)" stroke-width="1"/><circle cx="18" cy="18" r="10" fill="none" stroke="url(#nlg)" stroke-width="1.5" stroke-dasharray="4 3"><animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="12s" repeatCount="indefinite"/></circle><circle cx="18" cy="18" r="4" fill="url(#nlg)"/><circle cx="18" cy="8" r="1.5" fill="#6366f1" opacity="0.7"/><circle cx="26" cy="24" r="1.5" fill="#22d3ee" opacity="0.7"/><circle cx="10" cy="24" r="1.5" fill="#818cf8" opacity="0.7"/></svg></div>
     <div class="tl-brand-text"><div class="tl-brand-name">Talent<em>Lens</em></div><div class="tl-brand-tag">AI Career Intelligence Platform</div></div>
   </div>
-  <div class="tl-nav-tabs"><div class="tl-nav-tab {c_on}">{c_dot}Candidate Portal</div><div class="tl-nav-tab {r_on}">{r_dot}Recruiter Portal</div></div>
+  <div class="tl-nav-tabs">
+    <div class="tl-nav-tab {c_on}">{c_dot}Candidate Portal</div>
+    <div class="tl-nav-tab {r_on}">{r_dot}Recruiter Portal</div>
+  </div>
   <div class="tl-nav-stats">
     <div class="tl-stat"><div class="tl-stat-n">{TJ:,}</div><div class="tl-stat-k">Positions</div></div>
-    <div class="tl-stat"><div class="tl-stat-n">{TT}</div><div class="tl-stat-k">Skill Tracks</div></div>
-    <div class="tl-stat"><div class="tl-stat-n">{TC}</div><div class="tl-stat-k">Verticals</div></div>
+    <div class="tl-stat"><div class="tl-stat-n">{TT}</div><div class="tl-stat-k">Skill Profiles</div></div>
+    <div class="tl-stat"><div class="tl-stat-n">{TC}</div><div class="tl-stat-k">Domains</div></div>
   </div>
 </div>""", unsafe_allow_html=True)
 
@@ -787,22 +682,50 @@ st.markdown('<div style="margin:.75rem 0 0;">', unsafe_allow_html=True)
 sc1, sc2 = st.columns(2)
 with sc1:
     if st.button("Candidate Portal  —  Find My Role", use_container_width=True,
-                 type="primary" if st.session_state.pg == "cand" else "secondary", key="sw_c"):
+                 type="primary" if pg == "cand" else "secondary", key="sw_c"):
         st.session_state.pg = "cand"; st.rerun()
 with sc2:
     if st.button("Recruiter Portal  —  Screen Resumes", use_container_width=True,
-                 type="primary" if st.session_state.pg == "rec" else "secondary", key="sw_r"):
+                 type="primary" if pg == "rec" else "secondary", key="sw_r"):
         st.session_state.pg = "rec"; st.rerun()
 st.markdown('</div>', unsafe_allow_html=True)
 
 
-# ── CANDIDATE PAGE ────────────────────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
+#  CANDIDATE PAGE
+# ══════════════════════════════════════════════════════════════════════════════
 if st.session_state.pg == "cand":
     ch, cu = st.columns([1.4, 1], gap="small")
     with ch:
-        st.markdown(f"""<div class="hero-main"><div class="hero-badge"><div class="hero-badge-dot"></div><span class="hero-badge-txt">Live &middot; TF-IDF Semantic Engine</span></div><h1 class="hero-h1">Find the role<br>built for <em>exactly</em><br>who you are</h1><p class="hero-p">Drop your resume. Our engine reads every skill signal, weights every keyword, and ranks {TJ:,} positions by true semantic fit in under three seconds. Private. Instant. Precise.</p><div class="hero-chips"><span class="hero-chip"><span class="hero-chip-dot"></span><b>{TJ:,}</b>&nbsp;positions</span><span class="hero-chip"><span class="hero-chip-dot"></span><b>{TT}</b>&nbsp;skill profiles</span><span class="hero-chip"><span class="hero-chip-dot"></span><b>{TC}</b>&nbsp;verticals</span><span class="hero-chip"><span class="hero-chip-dot"></span>Zero data stored</span><span class="hero-chip"><span class="hero-chip-dot"></span>No sign-up</span></div></div>""", unsafe_allow_html=True)
+        st.markdown(f"""
+        <div class="hero-main">
+          <div class="hero-badge"><div class="hero-badge-dot"></div>
+            <span class="hero-badge-txt">Live &middot; TF-IDF Semantic Engine &middot; {TC} Industry Domains</span>
+          </div>
+          <h1 class="hero-h1">Find the role<br>built for <em>exactly</em><br>who you are</h1>
+          <p class="hero-p">Drop your resume. Our engine reads every skill signal, weights every keyword,
+          and ranks {TJ:,} positions across {TC} real-world domains by true semantic fit in under three seconds.
+          Private. Instant. Precise.</p>
+          <div class="hero-chips">
+            <span class="hero-chip"><span class="hero-chip-dot"></span><b>{TJ:,}</b>&nbsp;positions</span>
+            <span class="hero-chip"><span class="hero-chip-dot"></span><b>{TT}</b>&nbsp;skill profiles</span>
+            <span class="hero-chip"><span class="hero-chip-dot"></span><b>{TC}</b>&nbsp;domains</span>
+            <span class="hero-chip"><span class="hero-chip-dot"></span>Zero data stored</span>
+            <span class="hero-chip"><span class="hero-chip-dot"></span>No sign-up</span>
+          </div>
+        </div>""", unsafe_allow_html=True)
     with cu:
-        st.markdown("""<div class="upload-panel"><div class="up-label">Step 01 of 01</div><div class="up-title">Upload your <span>resume</span></div><div class="up-meta">PDF format &middot; Processed locally &middot; Never stored</div><div class="up-steps"><div class="up-step"><div class="up-step-n">1</div><div class="up-step-t">Select or drag your PDF resume</div></div><div class="up-step"><div class="up-step-n">2</div><div class="up-step-t">Engine extracts and vectorises all text</div></div><div class="up-step"><div class="up-step-n">3</div><div class="up-step-t">Top roles surface instantly</div></div></div></div>""", unsafe_allow_html=True)
+        st.markdown("""
+        <div class="upload-panel">
+          <div class="up-label">Step 01 of 01</div>
+          <div class="up-title">Upload your <span>resume</span></div>
+          <div class="up-meta">PDF format &middot; Processed locally &middot; Never stored</div>
+          <div class="up-steps">
+            <div class="up-step"><div class="up-step-n">1</div><div class="up-step-t">Select or drag your PDF resume</div></div>
+            <div class="up-step"><div class="up-step-n">2</div><div class="up-step-t">Engine extracts and vectorises all skill signals</div></div>
+            <div class="up-step"><div class="up-step-n">3</div><div class="up-step-t">Top roles across all domains surface instantly</div></div>
+          </div>
+        </div>""", unsafe_allow_html=True)
         uf = st.file_uploader("", type=["pdf"], label_visibility="collapsed", key="c_resume")
 
     if uf:
@@ -810,16 +733,14 @@ if st.session_state.pg == "cand":
             raw = pdf_text(uf)
             rc  = clean(raw)
 
-        # ── Guard: empty extraction ───────────────────────────────────────────
         if not rc.strip() or len(rc.strip()) < 50:
             st.markdown(
                 '<div class="warn-strip"><div class="warn-strip-line"></div>'
-                '<div class="warn-strip-txt"><b>Warning:</b> Very little text was extracted from this PDF. '
-                'The file may be scanned/image-based or password-protected. '
-                'Try exporting your resume as a text-based PDF for best results.</div></div>',
-                unsafe_allow_html=True
-            )
+                '<div class="warn-strip-txt"><b>Warning:</b> Very little text was extracted. '
+                'The file may be scanned or image-based. Try a text-based PDF export.</div></div>',
+                unsafe_allow_html=True)
 
+        # ── Resume Preview ────────────────────────────────────────────────────
         st.markdown(D("Document Analysis"), unsafe_allow_html=True)
         st.markdown(KK("01 · Parsed Document", "Resume <em>Preview</em>"), unsafe_allow_html=True)
         prev = (raw[:900] + "...") if len(raw) > 900 else raw
@@ -830,42 +751,25 @@ if st.session_state.pg == "cand":
             f'<div class="tl-chrome-id">RESUME_PARSER &middot; {len(raw):,} chars</div>'
             f'<div class="tl-chrome-ok">PARSED</div></div>'
             f'<div class="tl-term-body"><span class="tl-prompt">&gt; </span>{prev}<span class="tl-blink"></span></div></div>',
-            unsafe_allow_html=True
-        )
+            unsafe_allow_html=True)
 
+        # ── Classification ────────────────────────────────────────────────────
         st.markdown(D("Profile Classification"), unsafe_allow_html=True)
-
-        # ── Run improved classifier ───────────────────────────────────────────
-        pc, top5, method, dbg = predict_cat(rc, raw)
+        pc, top5, method, dbg, detected_domain = predict_cat(rc, raw)
         ms = max((s for _, s in top5), default=1) or 1
 
-        # Surface a helpful hint when keyword matching found nothing
         if method in ("tfidf", "none", "substring"):
-            hint_msg = (
-                "<b>Note:</b> No exact keyword matches were found in your resume against "
-                "<code>category_keywords.csv</code>. The category shown is based on semantic "
-                "similarity instead. To improve accuracy, ensure your resume contains explicit "
-                "skill/tool names that match your target category keywords."
-            )
-            if method == "none":
-                hint_msg = (
-                    "<b>No Strong Match:</b> Neither keyword matching nor semantic similarity "
-                    "could confidently classify this resume. This usually means the resume text "
-                    "extracted is too short, or its vocabulary doesn't overlap with any category "
-                    "in <code>category_keywords.csv</code>. Check that keywords in that file "
-                    "match real resume language."
-                )
-            st.markdown(
-                f'<div class="warn-strip"><div class="warn-strip-line"></div>'
-                f'<div class="warn-strip-txt">{hint_msg}</div></div>',
-                unsafe_allow_html=True
-            )
+            hint = ("<b>Note:</b> No exact keyword matches found. Classification is based on "
+                    "semantic similarity. Add explicit skill/tool names to your resume for better accuracy."
+                    if method != "none" else
+                    "<b>No Strong Match:</b> Resume text is too short or lacks vocabulary overlap "
+                    "with the dataset keywords. Ensure your resume contains specific skill and technology names.")
+            st.markdown(f'<div class="warn-strip"><div class="warn-strip-line"></div>'
+                        f'<div class="warn-strip-txt">{hint}</div></div>', unsafe_allow_html=True)
 
         st.markdown(KK("02 · Classification", "Career <em>Profile</em>"), unsafe_allow_html=True)
-
-        # Method badge label
-        method_label = {"keyword": "KEYWORD MATCH", "tfidf": "SEMANTIC MATCH",
-                        "substring": "PARTIAL MATCH", "none": "NO MATCH"}.get(method, method.upper())
+        method_label = {"keyword":"KEYWORD MATCH","tfidf":"SEMANTIC MATCH",
+                        "substring":"PARTIAL MATCH","none":"NO MATCH"}.get(method, method.upper())
 
         cm, cc = st.columns([1, 1.05], gap="small")
         with cm:
@@ -877,27 +781,34 @@ if st.session_state.pg == "cand":
                        else f'<span class="kw-n">{c}</span>')
                 rows += (f'<div class="kw-row"><span class="kw-i">0{i+1}</span>'
                          f'{nl}<div class="kw-track"><div class="kw-fill" style="width:{pct}%"></div></div>'
-                         f'<span class="kw-v">{round(s, 1) if isinstance(s, float) else s}</span></div>')
+                         f'<span class="kw-v">{round(s,1) if isinstance(s,float) else s}</span></div>')
+            dom_badge = (f'<div class="cls-domain">&#9670; {detected_domain}</div>'
+                         if detected_domain else "")
             st.markdown(
-                f'<div class="cls-panel anim a1">'
-                f'<div class="cls-hdr">'
+                f'<div class="cls-panel anim a1"><div class="cls-hdr">'
                 f'<div class="cls-kicker">Predicted Category &middot; {method_label}</div>'
-                f'<div class="cls-role">{pc}</div>'
+                f'<div class="cls-role">{pc}</div>{dom_badge}'
                 f'</div><div class="cls-body">{rows}</div></div>',
-                unsafe_allow_html=True
-            )
-
+                unsafe_allow_html=True)
         with cc:
             cdf = pd.DataFrame(top5, columns=["Category", "Score"])
-            st.markdown(
-                '<div class="chart-panel anim a2">'
-                '<div class="chart-k">Keyword Hit Rate</div>'
-                '<div class="chart-t">Score Distribution</div>',
-                unsafe_allow_html=True
-            )
+            st.markdown('<div class="chart-panel anim a2">'
+                        '<div class="chart-k">Keyword Hit Rate</div>'
+                        '<div class="chart-t">Score Distribution</div>', unsafe_allow_html=True)
             st.bar_chart(cdf.set_index("Category"), use_container_width=True, height=250)
             st.markdown('</div>', unsafe_allow_html=True)
 
+        # ── Skill Signals ─────────────────────────────────────────────────────
+        resume_kws = top_kw(raw, 16)
+        if resume_kws:
+            st.markdown(D("Skill Signals"), unsafe_allow_html=True)
+            st.markdown(KK("02b · Extracted Skills", "Your <em>Skill Signals</em>"), unsafe_allow_html=True)
+            tags = "".join(f'<span class="kw-ctag">{k}</span>' for k in resume_kws)
+            st.markdown(f'<div class="kw-panel anim"><div class="kw-panel-k">Detected from your resume</div>'
+                        f'<div class="kw-panel-t">Key Skills & Technologies</div>'
+                        f'<div class="kw-cloud">{tags}</div></div>', unsafe_allow_html=True)
+
+        # ── Job Matching ──────────────────────────────────────────────────────
         st.markdown(D("Role Matching"), unsafe_allow_html=True)
         st.markdown(KK("03 · Top Matches", "Top <em>Recommendations</em>"), unsafe_allow_html=True)
 
@@ -905,44 +816,104 @@ if st.session_state.pg == "cand":
             tj = top_jobs(rc, jobs_df, 10)
 
         if not tj.empty:
-            dp = tj[["Job_Title", "Category", "Match Score"]].copy()
+            dp = tj[["Job_Title", "Category", "Domain", "Match Score"]].copy()
             dp.index = range(1, len(dp) + 1)
             st.dataframe(dp, use_container_width=True)
 
             st.markdown(D("Role Details"), unsafe_allow_html=True)
             st.markdown(KK("04 · Breakdown", "Job <em>Breakdown</em>"), unsafe_allow_html=True)
+
             for i, row in tj.iterrows():
                 sc2  = row["Match Score"]
                 bc, bl = (("jb-hi",  f"Strong {sc2}%")   if sc2 >= 6 else
                           (("jb-mid", f"Moderate {sc2}%") if sc2 >= 3 else
                            ("jb-lo",  f"Weak {sc2}%")))
                 desc  = str(row.get("Job_Description", "")).strip() or "No description available."
-                short = ((desc[:280] + "...") if len(desc) > 280 else desc)
+                short = ((desc[:300] + "...") if len(desc) > 300 else desc)
                 short = short.replace("<", "&lt;").replace(">", "&gt;")
+                domain_str = str(row.get("Domain", "")).strip()
+                dom_tag = (f'<div class="jcard-domain">&#9670; {domain_str}</div>'
+                           if domain_str and domain_str.lower() not in ("nan","") else "")
+
+                # Get skills from master df
+                skill_row = MASTER_DF[MASTER_DF["Job_Title"] == row["Job_Title"]]
+                skills_str = skill_row["Skills"].values[0] if len(skill_row) > 0 else ""
+                skill_pills = ""
+                if skills_str and str(skills_str).lower() not in ("nan",""):
+                    pills = [s.strip() for s in str(skills_str).split()[:10] if len(s.strip()) > 2]
+                    skill_pills = "".join(f'<span class="skill-pill">{p}</span>' for p in pills)
+
                 st.markdown(
                     f'<div class="jcard anim" style="animation-delay:{i * 0.04}s">'
                     f'<div class="jcard-rank"><div class="jcard-rank-n">{i + 1:02d}</div></div>'
-                    f'<div class="jcard-body"><div class="jcard-t">{row["Job_Title"]}</div>'
-                    f'<div class="jcard-c">{row.get("Category", "—")}</div></div>'
+                    f'<div class="jcard-body">'
+                    f'<div class="jcard-t">{row["Job_Title"]}</div>'
+                    f'<div class="jcard-c">{row.get("Category","—")}</div>'
+                    f'{dom_tag}</div>'
                     f'<div class="jcard-score"><span class="jbadge {bc}">{bl}</span></div>'
-                    f'<div class="jcard-desc">{short}</div></div>',
-                    unsafe_allow_html=True
-                )
+                    f'<div class="jcard-desc">{short}</div>'
+                    + (f'<div class="skills-row">{skill_pills}</div>' if skill_pills else '') +
+                    f'</div>',
+                    unsafe_allow_html=True)
         else:
-            st.info("No job listings found. Add jobs.csv to your project directory.")
+            st.info("No job listings found. Ensure job_skill_intelligence_dataset.csv is in the app folder.")
+
     else:
-        st.markdown('<div class="tl-empty anim"><div style="margin-bottom:1.8rem;"><svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="eg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#6366f1" stop-opacity=".4"/><stop offset="100%" stop-color="#22d3ee" stop-opacity=".2"/></linearGradient></defs><circle cx="60" cy="60" r="55" fill="none" stroke="rgba(99,102,241,0.12)" stroke-width="1"><animateTransform attributeName="transform" type="rotate" from="0 60 60" to="360 60 60" dur="40s" repeatCount="indefinite"/></circle><circle cx="60" cy="60" r="40" fill="none" stroke="rgba(99,102,241,0.2)" stroke-width="1" stroke-dasharray="8 5"><animateTransform attributeName="transform" type="rotate" from="360 60 60" to="0 60 60" dur="25s" repeatCount="indefinite"/></circle><circle cx="60" cy="60" r="24" fill="none" stroke="rgba(34,211,238,0.25)" stroke-width="1.5"/><circle cx="60" cy="60" r="8" fill="url(#eg1)"/><circle cx="60" cy="60" r="8" fill="none" stroke="rgba(99,102,241,0.4)" stroke-width="1"><animate attributeName="r" values="8;18;8" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0;1" dur="3s" repeatCount="indefinite"/></circle><circle cx="60" cy="5" r="2.5" fill="#6366f1" opacity="0.7"><animateTransform attributeName="transform" type="rotate" from="0 60 60" to="360 60 60" dur="10s" repeatCount="indefinite"/></circle></svg></div><div class="tl-empty-h">Your next role awaits</div><p class="tl-empty-p">Upload a PDF resume above to activate the matching engine. Semantic analysis, zero sign-up.</p></div>', unsafe_allow_html=True)
+        st.markdown(
+            '<div class="tl-empty anim">'
+            '<div style="margin-bottom:1.8rem;">'
+            '<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">'
+            '<defs><linearGradient id="eg1" x1="0" y1="0" x2="1" y2="1">'
+            '<stop offset="0%" stop-color="#6366f1" stop-opacity=".4"/>'
+            '<stop offset="100%" stop-color="#22d3ee" stop-opacity=".2"/></linearGradient></defs>'
+            '<circle cx="60" cy="60" r="55" fill="none" stroke="rgba(99,102,241,0.12)" stroke-width="1">'
+            '<animateTransform attributeName="transform" type="rotate" from="0 60 60" to="360 60 60" dur="40s" repeatCount="indefinite"/></circle>'
+            '<circle cx="60" cy="60" r="40" fill="none" stroke="rgba(99,102,241,0.2)" stroke-width="1" stroke-dasharray="8 5">'
+            '<animateTransform attributeName="transform" type="rotate" from="360 60 60" to="0 60 60" dur="25s" repeatCount="indefinite"/></circle>'
+            '<circle cx="60" cy="60" r="24" fill="none" stroke="rgba(34,211,238,0.25)" stroke-width="1.5"/>'
+            '<circle cx="60" cy="60" r="8" fill="url(#eg1)"/>'
+            '<circle cx="60" cy="60" r="8" fill="none" stroke="rgba(99,102,241,0.4)" stroke-width="1">'
+            '<animate attributeName="r" values="8;18;8" dur="3s" repeatCount="indefinite"/>'
+            '<animate attributeName="opacity" values="1;0;1" dur="3s" repeatCount="indefinite"/></circle>'
+            '<circle cx="60" cy="5" r="2.5" fill="#6366f1" opacity="0.7">'
+            '<animateTransform attributeName="transform" type="rotate" from="0 60 60" to="360 60 60" dur="10s" repeatCount="indefinite"/></circle>'
+            '</svg></div>'
+            '<div class="tl-empty-h">Your next role awaits</div>'
+            '<p class="tl-empty-p">Upload a PDF resume above to activate the matching engine across '
+            f'{TJ:,} positions spanning {TC} real-world industry domains.</p></div>',
+            unsafe_allow_html=True)
 
 
-# ── RECRUITER PAGE ────────────────────────────────────────────────────────────
+# ══════════════════════════════════════════════════════════════════════════════
+#  RECRUITER PAGE
+# ══════════════════════════════════════════════════════════════════════════════
 else:
-    st.markdown(f'<div class="rec-hero"><div class="hero-badge" style="--p-dim:rgba(34,211,238,.08);--p-line:rgba(34,211,238,.18);"><div class="hero-badge-dot" style="background:var(--cyan);box-shadow:0 0 8px rgba(34,211,238,.5);"></div><span class="hero-badge-txt" style="color:var(--cyan);">Recruiter Mode &middot; Bulk Screening</span></div><h1 class="rec-h1">Screen <em>thousands</em><br>in seconds</h1><p class="hero-p" style="max-width:620px;">Paste a job description, upload up to 10,000 resumes via PDFs or a ZIP archive, and TalentLens ranks every candidate by TF-IDF cosine similarity.</p><div class="hero-chips"><span class="hero-chip"><span class="hero-chip-dot"></span>Up to <b>10,000</b> resumes</span><span class="hero-chip"><span class="hero-chip-dot"></span>ZIP archive support</span><span class="hero-chip"><span class="hero-chip-dot"></span>CSV export</span><span class="hero-chip"><span class="hero-chip-dot"></span>Keyword gap analysis</span></div></div>', unsafe_allow_html=True)
+    st.markdown(
+        f'<div class="rec-hero">'
+        f'<div class="hero-badge" style="--p-dim:rgba(34,211,238,.08);--p-line:rgba(34,211,238,.18);">'
+        f'<div class="hero-badge-dot" style="background:var(--cyan);box-shadow:0 0 8px rgba(34,211,238,.5);"></div>'
+        f'<span class="hero-badge-txt" style="color:var(--cyan);">Recruiter Mode &middot; Bulk Screening &middot; {TC} Domains</span>'
+        f'</div><h1 class="rec-h1">Screen <em>thousands</em><br>in seconds</h1>'
+        f'<p class="hero-p" style="max-width:620px;">Paste a job description, upload up to 10,000 resumes via PDFs or a ZIP archive. '
+        f'TalentLens ranks every candidate by TF-IDF cosine similarity against your JD.</p>'
+        f'<div class="hero-chips">'
+        f'<span class="hero-chip"><span class="hero-chip-dot"></span>Up to <b>10,000</b> resumes</span>'
+        f'<span class="hero-chip"><span class="hero-chip-dot"></span>ZIP archive support</span>'
+        f'<span class="hero-chip"><span class="hero-chip-dot"></span>CSV export</span>'
+        f'<span class="hero-chip"><span class="hero-chip-dot"></span>Live JD analysis</span>'
+        f'<span class="hero-chip"><span class="hero-chip-dot"></span>{TC} industry domains</span>'
+        f'</div></div>',
+        unsafe_allow_html=True)
+
     st.markdown(D("Job Description"), unsafe_allow_html=True)
     st.markdown(KK("Step 01", "Describe the <em>Role</em>"), unsafe_allow_html=True)
-    st.markdown('<div class="info-strip"><div class="info-strip-line"></div><div class="info-strip-txt">Paste the full job description including responsibilities, skills, and qualifications. <b>More detail = more accurate ranking.</b></div></div>', unsafe_allow_html=True)
-    jd = st.text_area("JOB DESCRIPTION", height=200, placeholder="e.g. Senior Data Scientist with 5+ years Python, ML, SQL...", key="jd")
+    st.markdown('<div class="info-strip"><div class="info-strip-line"></div>'
+                '<div class="info-strip-txt">Paste the full job description including responsibilities, '
+                'skills, and qualifications. <b>More detail = more accurate ranking.</b></div></div>',
+                unsafe_allow_html=True)
+    jd = st.text_area("JOB DESCRIPTION", height=200,
+                       placeholder="e.g. Senior Data Scientist with 5+ years Python, ML, SQL...", key="jd")
 
-    # ── Live JD Analysis ── fires as soon as the JD has enough text ──────────
     if jd and len(jd.strip()) >= 60:
         st.markdown(D("JD Intelligence"), unsafe_allow_html=True)
         st.markdown(KK("Step 01b", "Job Description <em>Analysis</em>"), unsafe_allow_html=True)
@@ -951,21 +922,30 @@ else:
     rj1, rj2 = st.columns(2)
     with rj1: rt = st.text_input("ROLE TITLE (OPTIONAL)", placeholder="Senior Data Scientist", key="rt")
     with rj2: tn = st.number_input("TOP N CANDIDATES", min_value=5, max_value=500, value=20, step=5, key="tn")
+
     st.markdown(D("Upload Resumes"), unsafe_allow_html=True)
     st.markdown(KK("Step 02", "Upload <em>Candidates</em>"), unsafe_allow_html=True)
-    st.markdown('<div class="info-strip"><div class="info-strip-line"></div><div class="info-strip-txt"><b>Two modes:</b> drag multiple PDFs (up to 1,000), or upload a single <b>ZIP archive</b> containing up to 10,000 PDFs.</div></div>', unsafe_allow_html=True)
-    um = st.selectbox("UPLOAD MODE", ["Multiple PDF Files (up to 1,000)", "ZIP Archive (up to 10,000 PDFs)"], key="um")
+    st.markdown('<div class="info-strip"><div class="info-strip-line"></div>'
+                '<div class="info-strip-txt"><b>Two modes:</b> drag multiple PDFs (up to 1,000), '
+                'or upload a single <b>ZIP archive</b> containing up to 10,000 PDFs.</div></div>',
+                unsafe_allow_html=True)
+    um = st.selectbox("UPLOAD MODE",
+                      ["Multiple PDF Files (up to 1,000)", "ZIP Archive (up to 10,000 PDFs)"], key="um")
     if "Multiple" in um:
-        rfs = st.file_uploader("", type=["pdf"], accept_multiple_files=True, label_visibility="collapsed", key="rfs")
+        rfs = st.file_uploader("", type=["pdf"], accept_multiple_files=True,
+                                label_visibility="collapsed", key="rfs")
     else:
-        zf = st.file_uploader("", type=["zip"], label_visibility="collapsed", key="zf"); rfs = None
+        zf  = st.file_uploader("", type=["zip"], label_visibility="collapsed", key="zf")
+        rfs = None
+
     st.markdown(D("Filter Options"), unsafe_allow_html=True)
     st.markdown(KK("Step 03", "Configure <em>Filters</em>"), unsafe_allow_html=True)
     rf1, rf2 = st.columns(2)
     with rf1: fms = st.slider("MINIMUM MATCH SCORE (%)", 0, 50, 0, 1, key="fms")
     with rf2: so  = st.selectbox("SORT ORDER", ["Best Match First", "A–Z", "Z–A"], key="so")
+
     st.markdown('<div class="run-btn" style="margin:1.5rem 0 0;">', unsafe_allow_html=True)
-    run = st.button("Analyse and Rank All Resume", use_container_width=True, key="run")
+    run = st.button("Analyse and Rank All Resumes", use_container_width=True, key="run")
     st.markdown('</div>', unsafe_allow_html=True)
 
     if run:
@@ -975,64 +955,94 @@ else:
             parsed = []
             if "Multiple" in um:
                 fl = rfs or []
-                if not fl: st.error("Upload at least one PDF."); st.stop()
+                if not fl:
+                    st.error("Upload at least one PDF.")
+                    st.stop()
                 prog = st.progress(0, text="Parsing resumes...")
                 for i, f in enumerate(fl):
-                    raw = pdf_text(f)
-                    nm  = f.name.replace(".pdf", "").replace("_", " ").replace("-", " ")
-                    parsed.append({"name": nm, "text": clean(raw), "raw": raw})
-                    prog.progress((i + 1) / len(fl), text=f"Parsing {i + 1}/{len(fl)}: {f.name}")
+                    raw_r = pdf_text(f)
+                    nm    = f.name.replace(".pdf","").replace("_"," ").replace("-"," ")
+                    parsed.append({"name": nm, "text": clean(raw_r), "raw": raw_r})
+                    prog.progress((i+1)/len(fl), text=f"Parsing {i+1}/{len(fl)}: {f.name}")
                 prog.empty()
             else:
-                if 'zf' not in dir() or zf is None: st.error("Upload a ZIP file."); st.stop()
+                if 'zf' not in dir() or zf is None:
+                    st.error("Upload a ZIP file.")
+                    st.stop()
                 with st.spinner("Extracting ZIP..."):
                     zb  = io.BytesIO(zf.read())
-                    with zipfile.ZipFile(zb, "r") as z:
+                    with zipfile.ZipFile(zb,"r") as z:
                         pns = [n for n in z.namelist() if n.lower().endswith(".pdf")]
-                if not pns: st.error("No PDFs in ZIP."); st.stop()
+                if not pns:
+                    st.error("No PDFs found in ZIP.")
+                    st.stop()
                 prog = st.progress(0, text=f"Processing {len(pns):,} resumes...")
                 for i, pn in enumerate(pns):
                     try:
-                        with zipfile.ZipFile(zb, "r") as z: pd_data = z.read(pn)
-                        raw = pdf_text(io.BytesIO(pd_data))
-                        nm  = os.path.basename(pn).replace(".pdf", "").replace("_", " ").replace("-", " ")
-                        parsed.append({"name": nm, "text": clean(raw), "raw": raw})
-                    except: pass
+                        with zipfile.ZipFile(zb,"r") as z: pd_data = z.read(pn)
+                        raw_r = pdf_text(io.BytesIO(pd_data))
+                        nm    = os.path.basename(pn).replace(".pdf","").replace("_"," ").replace("-"," ")
+                        parsed.append({"name": nm, "text": clean(raw_r), "raw": raw_r})
+                    except:
+                        pass
                     if i % 50 == 0:
-                        prog.progress((i + 1) / len(pns), text=f"Parsed {i + 1:,}/{len(pns):,}...")
+                        prog.progress((i+1)/len(pns), text=f"Parsed {i+1:,}/{len(pns):,}...")
                 prog.empty()
 
             tu = len(parsed)
-            if tu == 0: st.error("No readable resumes found."); st.stop()
+            if tu == 0:
+                st.error("No readable resumes found.")
+                st.stop()
+
             jdc = clean(jd)
             with st.spinner(f"Vectorising {tu:,} resumes..."):
                 rdf = rank_resumes(jdc, parsed, int(tn))
+
             rdf = rdf[rdf["Match Score"] >= fms]
             if so == "A–Z":   rdf = rdf.sort_values("File Name")
             elif so == "Z–A": rdf = rdf.sort_values("File Name", ascending=False)
             rdf = rdf.reset_index(drop=True)
             jkw = top_kw(jd, 12)
+
+            # ── Stats ─────────────────────────────────────────────────────────
             st.markdown(D("Results"), unsafe_allow_html=True)
             avg   = rdf["Match Score"].mean() if not rdf.empty else 0
             top_s = rdf["Match Score"].max()  if not rdf.empty else 0
             abv   = len(rdf[rdf["Match Score"] >= 5])
-            st.markdown(f'<div class="stat-grid"><div class="stat-card anim"><div class="stat-accent sa1"></div><div class="stat-tag">TOTAL</div><div class="stat-n">{tu:,}</div><div class="stat-l">Resumes Processed</div></div><div class="stat-card anim a1"><div class="stat-accent sa2"></div><div class="stat-tag">BEST</div><div class="stat-n">{top_s:.1f}%</div><div class="stat-l">Top Match Score</div></div><div class="stat-card anim a2"><div class="stat-accent sa3"></div><div class="stat-tag">AVG</div><div class="stat-n">{avg:.1f}%</div><div class="stat-l">Average Score</div></div><div class="stat-card anim a3"><div class="stat-accent sa4"></div><div class="stat-tag">STRONG</div><div class="stat-n">{abv}</div><div class="stat-l">Strong Matches</div></div></div>', unsafe_allow_html=True)
+            st.markdown(
+                f'<div class="stat-grid">'
+                f'<div class="stat-card anim"><div class="stat-accent sa1"></div><div class="stat-tag">TOTAL</div><div class="stat-n">{tu:,}</div><div class="stat-l">Resumes Processed</div></div>'
+                f'<div class="stat-card anim a1"><div class="stat-accent sa2"></div><div class="stat-tag">BEST</div><div class="stat-n">{top_s:.1f}%</div><div class="stat-l">Top Match Score</div></div>'
+                f'<div class="stat-card anim a2"><div class="stat-accent sa3"></div><div class="stat-tag">AVG</div><div class="stat-n">{avg:.1f}%</div><div class="stat-l">Average Score</div></div>'
+                f'<div class="stat-card anim a3"><div class="stat-accent sa4"></div><div class="stat-tag">STRONG</div><div class="stat-n">{abv}</div><div class="stat-l">Strong Matches ≥ 5%</div></div>'
+                f'</div>', unsafe_allow_html=True)
+
             if jkw:
                 tags = "".join(f'<span class="kw-ctag">{k}</span>' for k in jkw)
-                st.markdown(f'<div class="kw-panel anim a1"><div class="kw-panel-k">Extracted from Job Description</div><div class="kw-panel-t">Matching Signals</div><div class="kw-cloud">{tags}</div></div>', unsafe_allow_html=True)
+                st.markdown(
+                    f'<div class="kw-panel anim a1"><div class="kw-panel-k">Extracted from Job Description</div>'
+                    f'<div class="kw-panel-t">Matching Signals</div>'
+                    f'<div class="kw-cloud">{tags}</div></div>', unsafe_allow_html=True)
+
+            # ── Rankings table ────────────────────────────────────────────────
             st.markdown(KK("Ranked Results", f"Top <em>{len(rdf)}</em> Candidates"), unsafe_allow_html=True)
-            ddf = rdf[["Rank", "File Name", "Match Score"]].copy()
+            ddf = rdf[["Rank","File Name","Match Score"]].copy()
             ddf["Match Score"] = ddf["Match Score"].apply(lambda x: f"{x:.2f}%")
             st.dataframe(ddf, use_container_width=True, hide_index=True)
-            csv = rdf[["Rank", "File Name", "Match Score"]].to_csv(index=False).encode()
+
+            csv = rdf[["Rank","File Name","Match Score"]].to_csv(index=False).encode()
             st.download_button("Export Rankings as CSV", data=csv,
-                               file_name=f"talentlens_{(rt or 'rankings').replace(' ', '_')}.csv",
+                               file_name=f"talentlens_{(rt or 'rankings').replace(' ','_')}.csv",
                                mime="text/csv", use_container_width=True, key="dl")
+
+            # ── Candidate profiles ────────────────────────────────────────────
             st.markdown(D("Candidate Profiles"), unsafe_allow_html=True)
             st.markdown(KK("Detailed View", "Candidate <em>Profiles</em>"), unsafe_allow_html=True)
             mset = set(k.lower() for k in jkw)
             for _, row in rdf.head(50).iterrows():
-                rank  = int(row["Rank"]); sc2 = float(row["Match Score"]); nm = row["File Name"]
+                rank  = int(row["Rank"])
+                sc2   = float(row["Match Score"])
+                nm    = row["File Name"]
                 med   = medal(rank)
                 raw_t = next((r["raw"] for r in parsed if r["name"] == nm), "")
                 rc2   = "hi" if sc2 >= 10 else ("mid" if sc2 >= 4 else "")
@@ -1042,28 +1052,50 @@ else:
                 ckw = top_kw(raw_t, 10)
                 kwh = "".join(
                     f'<span class="rtag{"  match" if k.lower() in mset else ""}">{k}</span>'
-                    for k in ckw[:8]
-                )
-                snip = re.sub(r'\s+', ' ', raw_t[:180].strip()).replace("<", "&lt;").replace(">", "&gt;") if raw_t else "No text extracted."
+                    for k in ckw[:8])
+                snip = (re.sub(r'\s+', ' ', raw_t[:180].strip())
+                        .replace("<","&lt;").replace(">","&gt;")) if raw_t else "No text extracted."
                 st.markdown(
-                    f'<div class="rcard anim"><div class="rcard-rank">'
-                    f'<div class="rcard-rank-n">{rank:02d}</div>'
+                    f'<div class="rcard anim">'
+                    f'<div class="rcard-rank"><div class="rcard-rank-n">{rank:02d}</div>'
                     f'<div class="rcard-rank-m">{med}</div></div>'
                     f'<div class="rcard-body"><div class="rcard-name">{nm}</div>'
                     f'<div class="rcard-meta">{len(raw_t):,} chars &middot; '
                     f'<span class="jbadge {bc}" style="padding:2px 8px;font-size:.56rem;">{bl}</span></div>'
                     f'<div class="tag-row">{kwh}</div>'
                     f'<div style="margin-top:9px;font-size:.75rem;color:var(--t3);line-height:1.75;font-weight:300;">{snip}...</div>'
-                    f'</div><div class="rcard-score">'
-                    f'<div class="score-ring {rc2}"><div class="score-ring-v">{sc2:.0f}%</div>'
+                    f'</div>'
+                    f'<div class="rcard-score"><div class="score-ring {rc2}">'
+                    f'<div class="score-ring-v">{sc2:.0f}%</div>'
                     f'<div class="score-ring-l">MATCH</div></div></div></div>',
-                    unsafe_allow_html=True
-                )
+                    unsafe_allow_html=True)
+
             if len(rdf) > 50:
                 st.markdown(
                     f'<div class="info-strip"><div class="info-strip-line"></div>'
-                    f'<div class="info-strip-txt">Showing top 50 profiles. All {len(rdf)} results are in the exported CSV.</div></div>',
-                    unsafe_allow_html=True
-                )
+                    f'<div class="info-strip-txt">Showing top 50 profiles. '
+                    f'All {len(rdf)} results are available in the exported CSV.</div></div>',
+                    unsafe_allow_html=True)
     else:
-        st.markdown('<div class="tl-empty anim"><div style="margin-bottom:1.8rem;"><svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="eg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#22d3ee" stop-opacity=".4"/><stop offset="100%" stop-color="#6366f1" stop-opacity=".2"/></linearGradient></defs><circle cx="60" cy="60" r="55" fill="none" stroke="rgba(34,211,238,0.12)" stroke-width="1"><animateTransform attributeName="transform" type="rotate" from="0 60 60" to="360 60 60" dur="40s" repeatCount="indefinite"/></circle><rect x="24" y="24" width="72" height="72" rx="10" fill="none" stroke="rgba(34,211,238,0.2)" stroke-width="1" stroke-dasharray="8 4"><animateTransform attributeName="transform" type="rotate" from="0 60 60" to="360 60 60" dur="30s" repeatCount="indefinite"/></rect><circle cx="60" cy="60" r="16" fill="none" stroke="rgba(99,102,241,0.3)" stroke-width="1.5"/><circle cx="60" cy="60" r="6" fill="url(#eg2)"/><circle cx="60" cy="60" r="6" fill="none" stroke="rgba(34,211,238,0.4)" stroke-width="1"><animate attributeName="r" values="6;18;6" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0;1" dur="3s" repeatCount="indefinite"/></circle><circle cx="60" cy="5" r="2" fill="#22d3ee" opacity="0.6"><animateTransform attributeName="transform" type="rotate" from="0 60 60" to="360 60 60" dur="12s" repeatCount="indefinite"/></circle></svg></div><div class="tl-empty-h">Ready to screen candidates</div><p class="tl-empty-p">Paste a job description, upload your resume batch, then click Analyse and Rank.</p></div>', unsafe_allow_html=True)
+        st.markdown(
+            '<div class="tl-empty anim">'
+            '<div style="margin-bottom:1.8rem;">'
+            '<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">'
+            '<defs><linearGradient id="eg2" x1="0" y1="0" x2="1" y2="1">'
+            '<stop offset="0%" stop-color="#22d3ee" stop-opacity=".4"/>'
+            '<stop offset="100%" stop-color="#6366f1" stop-opacity=".2"/></linearGradient></defs>'
+            '<circle cx="60" cy="60" r="55" fill="none" stroke="rgba(34,211,238,0.12)" stroke-width="1">'
+            '<animateTransform attributeName="transform" type="rotate" from="0 60 60" to="360 60 60" dur="40s" repeatCount="indefinite"/></circle>'
+            '<rect x="24" y="24" width="72" height="72" rx="10" fill="none" stroke="rgba(34,211,238,0.2)" stroke-width="1" stroke-dasharray="8 4">'
+            '<animateTransform attributeName="transform" type="rotate" from="0 60 60" to="360 60 60" dur="30s" repeatCount="indefinite"/></rect>'
+            '<circle cx="60" cy="60" r="16" fill="none" stroke="rgba(99,102,241,0.3)" stroke-width="1.5"/>'
+            '<circle cx="60" cy="60" r="6" fill="url(#eg2)"/>'
+            '<circle cx="60" cy="60" r="6" fill="none" stroke="rgba(34,211,238,0.4)" stroke-width="1">'
+            '<animate attributeName="r" values="6;18;6" dur="3s" repeatCount="indefinite"/>'
+            '<animate attributeName="opacity" values="1;0;1" dur="3s" repeatCount="indefinite"/></circle>'
+            '<circle cx="60" cy="5" r="2" fill="#22d3ee" opacity="0.6">'
+            '<animateTransform attributeName="transform" type="rotate" from="0 60 60" to="360 60 60" dur="12s" repeatCount="indefinite"/></circle>'
+            '</svg></div>'
+            '<div class="tl-empty-h">Ready to screen candidates</div>'
+            '<p class="tl-empty-p">Paste a job description, upload your resume batch, then click Analyse and Rank.</p></div>',
+            unsafe_allow_html=True)
